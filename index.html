@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en-us"> <!-- Use lang, to assist search engines and browsers. -->
+<!-- <html dir="rtl"> To create right to left website -->
+<head>
+	<title>Html Tutorials</title>
+
+  <!-- The meta element is typically used to specify the character set, 
+  page description, keywords, author of the document, and viewport settings.
+  The metadata will not be displayed on the page, but are used by browsers 
+  by search engines (keywords), and other web services. -->
+
+ <!--  To ensure proper interpretation and correct search engine indexing, both the language and the character encoding <meta charset="charset"> should be defined as early as possible in an HTML document -->
+
+  <meta charset="UTF-8"> 
+  <meta name="description" content="Learning html">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Rahul Sharma">
+  <meta name="robots" content="index, follow"> <!-- (index, follow), (index, nofollow), (noindex, nofollow) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Adding favicon -->
+  <link rel="icon" type="image/jpeg" href="media/image.jpg">
+  <!-- online favicon generators can be used to gen. better favicon. -->
+
+  <style>
+  	/*this is interal css*/
+  	h1{
+  		color: blue;
+  	}
+  </style>
+  <link rel="stylesheet" href="style.css"> <!-- external css -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=fire|outline|neon">
+
+  <script>
+    console.log("Hello World!");
+  </script>
+
+  <!-- If javascript is not enabled in browser then we can show message: -->
+  <noscript>
+    Please enable javascript
+  </noscript>
+
+  <!-- <script src="script.js"></script> To add exteral js -->
+
+  <!-- The viewport is the user's visible area of a web page. 
+  It varies with the device - it will be smaller on a mobile phone than on a computer screen -->
+
+  <!-- This gives the browser instructions on how to control the page's dimensions and scaling.
+
+  The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+
+  The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser. -->
+</head>
+
+<body>
+<div class="headings">
+<h1 class="font-effect-fire">Hello World 1</h1>
+<h2 style="color: green;">Hello World 2</h2> <!-- this is inline css -->
+<h3>Hello World 3</h3>
+<h4>Hello World 4</h4>
+<h5>Hello World 5</h5>
+<h6>Hello World 6</h6>
+</div>
+
+<p>This is paragraph, and it is a block element</p>
+<pre>This is paragrah where I can give extra spaces    and linebreaks.
+
+  This can   be done using pre tag
+</pre>
+<hr> <!-- horizonal rule tag -->
+<br> <!-- line-break tag -->
+
+<strong>Bold</strong>
+<b>Bold using b tag</b>
+<i>Italic</i>
+<em>Emphasized</em>
+<u>Underlined Text</u>
+<strike>Striked Text</strike>
+<mark>Marked Text</mark>
+<small>Small Text</small>
+<del>Deleted Text</del>
+<ins>Inserted Text</ins>
+<p>log<sub>10</sub> (sub text)</p>
+<p>10<sup>5</sup> (super text)</p>
+
+<blockquote cite="http://www.worldwildlife.org/who/index.html"> <!-- cite -> from where quote has been taken -->
+For nearly 60 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by more than one million members in the United States and close to five million globally.
+</blockquote>
+<p><q>This is quote</q></p>
+
+<abbr title="World Health Organization">WHO</abbr>
+
+<address id="addr">           <!-- useful in SEO -->
+This is address<br>
+Visit us at:<br>
+Example.com<br>
+Box 564, Disneyland<br>
+USA
+</address>
+
+<cite>The lost kid</cite> is written by ...
+<h1>Marquee</h1>
+<!-- attributes: direction=("left", "right", "up", "down")
+            scrollamount=number (default is 6)
+          -->
+<marquee>This is marquee (default scrollamount - 6)</marquee>
+<marquee scrollamount=10>This is marquee (scrollamount - 10)</marquee>
+<marquee direction="right"><img src="media/image.jpg" id="logoImg">is logo</marquee>
+
+<h3><font face="Times new roman" color="royalblue" size=15>This is Inline Text Formatting</font></h3>
+
+<!-- This is comment -->
+<div class="list">
+<h4>Unordered List</h4>
+<!-- The CSS list-style-type property can also be used to define the style of the list item marker -->
+<ul>                		<!--type= circle, square, disk, none -->
+
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<h4>Ordered List</h4> 		
+<!--type= A, a, 1, I, i -->
+<!-- attributes:- start, type etc.. -->
+<ol>
+  <li>Coffee</li>
+  <ol type="a">
+    <li>Chocolate Coffee</li>
+    <li>Cappu. Coffee</li>
+  </ol>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+
+
+<h4>Description List</h4>
+<dl>
+  <dt>Coffee</dt>
+  <dd>- black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>- white cold drink</dd>
+</dl>
+
+</div>
+
+<h4>This is table</h4>
+
+<table>
+  <caption>Users</caption>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Savings</th>
+    <th>Profile Image</th>
+  </tr>
+  <tr>
+    <td>Peter</td>
+    <td>Griffin</td>
+    <td>$100</td>
+    <td><img src="media/image.jpg"></td>
+  </tr>
+  <tr>
+    <td>Lois</td>
+    <td>Griffin</td>
+    <td>$150</td>
+    <td><img src="media/image.jpg"></td>
+  </tr>
+  <tr>
+    <td>Joe</td>
+    <td>Swanson</td>
+    <td>$300</td>
+    <td><img src="media/image.jpg"></td>
+  </tr>
+  <tr>
+    <td>Cleveland</td>
+    <td>Brown</td>
+    <td>$250</td>
+    <td><img src="media/image.jpg"></td>
+  </tr>
+</table>
+<!-- Table tags:
+<table> Defines a table
+<th>    Defines a header cell in a table
+<tr>    Defines a row in a table
+<td>    Defines a cell in a table
+<caption> Defines a table caption
+<colgroup>  Specifies a group of one or more columns in a table for formatting
+<col>     Specifies column properties for each column within a <colgroup> element
+<thead>   Groups the header content in a table
+<tbody>   Groups the body content in a table
+<tfoot>   Groups the footer content in a table
+</table> -->
+
+<div>
+  <h1>Links</h1>
+  <p>The title attribute specifies extra information about an element. The information is most often shown as a tooltip text when the mouse moves over the element.</p>
+    <a href="http://google.com" title="Go to google">This is link</a><br>
+    <a href="http://wkipedia.com" target="_blank">Click here to open wikipedia in new tab</a>
+    <!-- using image as link -->
+    <a href="http://facebook.com" title="Go to facebook">
+    <img src="media/fb.png" alt="using image as link" style="width:42px;height:42px;">
+    </a>
+<button onclick="document.location='#'" accesskey="b">Button as link</button>
+
+<!-- HTML Link Colors
+By default, a link will appear like this (in all browsers):
+
+An unvisited link is underlined and blue
+A visited link is underlined and purple
+An active link is underlined and red
+-->
+<h2>Link to an Email Address</h2>
+<p>Use mailto: inside the href attribute to create a link that opens the user's email program</p>
+<a href="mailto:rahulsharma4298@gmail.com">Send Mail</a>
+</div>
+<!-- The target attribute specifies where to open the linked document.
+
+The target attribute can have one of the following values:
+
+_self - Default. Opens the document in the same window/tab as it was clicked
+_blank - Opens the document in a new window or tab
+_parent - Opens the document in the parent frame
+_top - Opens the document in the full body of the window -->
+
+<!-- absolute URL (a full web address) in the href attribute (http://google.com)
+
+A local link (a link to a page within the same website) is specified with a relative URL (without the "https://www" part)
+(login.php) -->
+
+<img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8aHVtYW58ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80" 
+alt="An Image" style="width: 400px;height: 400px;" id="pic-img">
+
+<img src="https://www.w3schools.com/html/workplace.jpg" alt="Workplace" usemap="#workmap">
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+</map>
+
+<!-- https://imagemap.org/  Image map generator-->
+
+<picture>
+  <!-- Defines a container for multiple image resources -->
+  <source media="(min-width: 650px)" srcset="https://www.w3schools.com/html/img_food.jpg">
+  <source media="(min-width: 465px)" srcset="https://www.w3schools.com/html/img_car.jpg">
+  <img src="https://www.w3schools.com/html/img_girl.jpg">
+</picture>
+
+<h1>Adding Video</h1>
+<!-- MP4 type=video/mp4
+WebM type=video/webm
+Ogg type=video/ogg -->
+
+<video controls>
+<!-- attributes:- muted, autoplay, controls, poster, preload, width, height etc.. -->
+  <source src="media/video.mp4" type="video/mp4">
+  <source src="media/video.ogg" type="video/ogg"> 
+    Your browser does not support the video tag.
+</video>
+
+<h1>Adding Audio</h1>
+<!-- 
+MP3 type=audio/mpeg
+OGG type=audio/ogg
+WAV type=audio/wav 
+-->
+<audio controls>
+<!-- attributes:- muted, autoplay, controls etc.. -->
+<source src="media/audio.mp3" type="audio/mp3">
+<source src="media/audio.wav" type="audio/wav">
+  Your browser does not support the audio element.
+</audio>
+
+<h1>Adding iframe</h1>
+<p>An HTML iframe is used to display a web page within a web page.</p>
+<!-- attributes:- title, width, height, frameborder etc.. -->
+<iframe src="https://www.bhaskar.com/" width="600" height="400" title="Royal Chat" frameborder="0" allowfullscreen>
+  
+</iframe>
+
+<h1>Embeding Youtube Videos</h1>
+<!-- We can start video playing automatically when a user visits the page, 
+by adding autoplay=1 to the YouTube URL.  
+
+Add mute=1 after autoplay=1 to let your video start playing automatically (but muted).
+ie
+"https://www.youtube.com/embed/qdMebyzTAEs?autoplay=1&mute=1"
+
+YouTube Playlist
+A comma separated list of videos to play (in addition to the original URL).
+-->
+<iframe width="600" height="400" src="https://www.youtube.com/embed/QXPWs00RD3A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h1>Embeding Google Maps</h1>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.561907193009!2d77.22732101440677!3d28.61291669172069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2daa9eb4d0b%3A0x717971125923e5d!2sIndia%20Gate!5e0!3m2!1sen!2sin!4v1617643803443!5m2!1sen!2sin" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+<h1>HTML Plug-ins</h1>
+<ul>Plug-ins were designed to be used for many different purposes:
+
+<li>To run Java applets</li>
+<li>To run Microsoft ActiveX controls</li>
+<li>To display Flash movies</li>
+<li>To display maps</li>
+<li>To scan for viruses</li>
+<li>To verify a bank id</li>
+</ul>
+
+<h2>1)The object Element</h2>
+
+<ul>
+<li>The object element is supported by all browsers.</li>
+<li>The object element defines an embedded object within an HTML document.</li>
+<li>It was designed to embed plug-ins (like Java applets, PDF readers, and Flash Players) in web pages, but can also be used to include HTML in HTML:</li>
+</ul>
+
+<object width="600" data="snippet.html"></object>
+
+<h2>2)The embed Element</h2>
+<ul>
+<li>The embed element is supported in all major browsers.</li>
+<li>The embed element also defines an embedded object within an HTML document.</li>
+</ul>
+<embed src="media/image.jpg">
+
+<h1>Embeding PDF</h1>
+<p>Can be done using iframe, embed & object</p>
+<!-- attributes - type ... -->
+<!-- <object data="sample_pdf.pdf" type="application/pdf"></object> -->
+<embed src="media/sample_pdf.pdf" type="application/pdf" width="600" height="400">
+<!-- <iframe src="sample_pdf.pdf"></iframe> -->
+
+<h1>HTML Block and Inline Elements</h1>
+<h2>Block elements</h2>
+<pre>A block-level element always starts on a new line.
+A block-level element always takes up the full width available.
+A block level element has a top and a bottom margin, whereas an inline element does not.
+</pre>
+<h3>The div element is a block-level element.</h3>
+<pre>
+  The div element is often used as a container for other HTML elements.
+  The div element has no required attributes, but style, class and id are common.
+</pre>
+  <div class="container1">
+    <h5>I am inside div with image below</h5>
+    <img src="media/image.jpg">
+  </div>
+
+<h2>Inline elements</h2>
+<pre>
+  An inline element does not start on a new line.
+  An inline element only takes up as much width as necessary.
+</pre>
+
+<span>Hello World, inside span tag which is inline element</span>
+<pre>The span element is an inline container used to mark up a part 
+of a text, or a part of a document.</pre>
+
+<!-- 
+The HTML base Element
+The base element specifies the base URL and/or target for all relative URLs in a page.
+The base tag must have either an href or a target attribute present, or both.
+There can only be one single base element in a document!
+<head>
+<base href="https://www.mysite.com/" target="_blank">
+</head>
+ -->
+
+ <h1>HTML Entities</h1>
+ <pre>
+  Some characters are reserved in HTML.
+  If you use the less than (<) or greater than (>) signs in your text, the browser might mix them with tags.
+  Character entities are used to display reserved characters in HTML.
+  A character entity looks like this:
+
+  &entity_name;
+    OR
+  &#entity_number;
+ </pre>
+
+ &lt; &gt; hello&nbsp;&nbsp;&nbsp;&nbsp;world &lt;div&gt;
+ &nbsp;&copy;2021 &quot;rahul&quot;
+
+<!--  <h2>Some Useful HTML Character Entities</h2>
+ <pre>
+  Result  Description Entity Name Entity Number
+  non-breaking space  &nbsp;  &#160;
+  < less than &lt;  &#60;
+  > greater than  &gt;  &#62;
+  & ampersand &amp; &#38;
+  " double quotation mark &quot;  &#34;
+  ' single quotation mark (apostrophe)  &apos;  &#39;
+  ¢ cent  &cent;  &#162;
+  £ pound &pound; &#163;
+  ¥ yen &yen; &#165;
+  € euro  &euro;  &#8364;
+  © copyright &copy;  &#169;
+  ® registered trademark  &reg; &#174;
+</pre> -->
+
+ <h1>HTML Symbols</h1>
+<pre>
+Many mathematical, technical, and currency symbols, are not present on a normal keyboard.
+To add such symbols to an HTML page, you can use the entity name or the entity number.
+</pre>
+
+<h4>Display the euro sign, €, with an entity name, a decimal, and a hexadecimal value:</h4>
+
+<p>I will display &euro;</p>
+<p>I will display &#8364;</p>
+<p>I will display &#x20AC;</p>
+
+Some examples:
+<pre>
+© &#169;  &copy;  COPYRIGHT SIGN
+® &#174;  &reg; REGISTERED SIGN
+€ &#8364; &euro;  EURO SIGN
+™ &#8482; &trade; TRADEMARK
+← &#8592; &larr;  LEFTWARDS ARROW
+↑ &#8593; &uarr;  UPWARDS ARROW
+→ &#8594; &rarr;  RIGHTWARDS ARROW
+↓ &#8595; &darr;  DOWNWARDS ARROW
+♠ &#9824; &spades;  BLACK SPADE SUIT
+♣ &#9827; &clubs; BLACK CLUB SUIT
+♥ &#9829; &hearts;  BLACK HEART SUIT
+♦ &#9830; &diams; BLACK DIAMOND SUIT
+</pre>
+
+<h1>HTML Emojis</h1>
+<pre>
+Emojis look like images, or icons, but they are not.
+They are letters (characters) from the UTF-8 (Unicode) character set.
+To display an HTML page correctly, a web browser must know the character set used in the page.
+This is specified in the &lt;meta&gt; tag:
+<!-- <meta charset="UTF-8"> -->
+If not specified, UTF-8 is the default character set in HTML.
+</pre>
+
+Emoji   Value
+🗻    &#128507;
+🗼    &#128508;
+🗽    &#128509;
+🗾    &#128510;
+🗿    &#128511;
+😀     &#128512;
+😁    &#128513;
+😂    &#128514;
+😃    &#128515;
+😄    &#128516;
+😅    &#128517;
+
+<h1>HTML Semantic Elements</h1>
+<pre>
+A semantic element clearly describes its meaning to both the browser and the developer.
+
+Examples of non-semantic elements: &lt;div&gt; and &lt;span&gt; - Tells nothing about its content.
+Examples of semantic elements: &lt;form&gt;, &lt;table&gt;, and &lt;article&gt; - Clearly defines its content.
+</pre>
+
+<h2>- section tag</h2>
+<section>
+  Inside section tag.
+  The &lt;section&gt; element defines a section in a document.
+</section>
+
+<h2>- article tag</h2>
+<article>
+  The &lt;article&gt; element specifies independent, self-contained content.
+  <ul>Examples of where an &lt;article&gt; element can be used:
+  <li>Forum post</li>
+  <li>Blog post</li>
+  <li>Newspaper article</li>
+  </ul>
+</article>
+Examples:-
+<article>
+<h3>Google Chrome</h3>
+<p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+</article>
+
+<article>
+<h3>Mozilla Firefox</h3>
+<p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
+</article>
+
+<h2>- nav tag</h2>
+<p>The &lt;nav&gt; element defines a set of navigation links.</p>
+<h4>Example:</h4>
+<nav>
+  <a href="#">HTML</a> |
+  <a href="#">CSS</a> |
+  <a href="#">Javascrupt</a>
+</nav>
+
+<h2>- aside tag</h2>
+<p>The &lt;aside&gt; element defines some content aside from the content it is placed in (like a sidebar).</p>
+<h4>Example:</h4>
+<aside>
+<h4>Epcot Center</h4>
+<p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+<h2>- figure and figcaption Elements</h2>
+
+<pre>
+The &lt;figure&gt; tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+The &lt;figcaption&gt; tag defines a caption for a figure element. The figcaption element can be placed as the first or as the last child of a figure element.
+</pre>
+<h4>Example:</h4>
+<figure>
+  <img src="media/pic_t.jpg">
+  <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+</figure>
+
+<h2>- header Element</h2>
+<p>
+The &lt;header&gt; element represents a container for introductory content or a set of navigational links.
+A header element typically contains:
+<ul>
+<li>one or more heading elements (h1 - h6)</li>
+<li>logo or icon></li>
+<li>authorship information</li>
+</ul>
+</p>
+<h4>Example:</h4>
+<article>
+  <header>
+    <h3>What Does WWF Do?</h3>
+    <p>WWF's mission:</p>
+  </header>
+  <p>WWF's mission is to stop the degradation of our planet's natural environment,
+  and build a future in which humans live in harmony with nature.</p>
+</article>
+
+
+<h2>- footer Element</h2>
+<p>The &lt;footer&gt; element defines a footer for a document or section.</p>
+<p>You can have several footer elements in one document.</p>
+
+<h4>Example:</h4>
+<footer>
+&copy 2021 Rahul Sharma | HTML Tutorials
+</footer>
+<!--semantic tags list:
+Tag       Description
+<article> Defines independent, self-contained content
+<aside> Defines content aside from the page content
+<details> Defines additional details that the user can view or hide
+<figcaption>  Defines a caption for a <figure> element
+<figure>  Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+<footer>  Defines a footer for a document or section
+<header>  Specifies a header for a document or section
+<main>  Specifies the main content of a document
+<mark>  Defines marked/highlighted text
+<nav> Defines navigation links
+<section> Defines a section in a document
+<summary> Defines a visible heading for a <details> element
+<time>  Defines a date/time -->
+
+<h1>HTML Computer Code Elements</h1>
+<ul>
+<li>The &lt;kbd&gt; element defines keyboard input</li>
+<li>The &lt;samp&gt; element defines sample output from a computer program</li>
+<li>The &lt;code&gt; element defines a piece of computer code</li>
+<li>The &lt;var&gt; element defines a variable in programming or in a mathematical expression</li>
+<li>The &lt;pre&gt; element defines preformatted text</li>
+</ul>
+
+<p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+
+<p>Message from my computer:</p>
+<p><samp>File not found.<br>Press F1 to continue</samp></p>
+
+<code>
+  x = 5; 
+  y = 6; 
+  z = x + y;
+</code>
+
+<pre>
+<code>
+  x = 5; 
+  y = 6; 
+  z = x + y;
+</code>
+</pre>
+
+<p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.</p>
+
+<h1>CSS Units</h1>
+
+<pre>
+1.Absolute Units:
+
+cm - centimeters
+mm - millimeters
+in - inches (1in = 96px = 2.54cm)
+px * - pixels (1px = 1/96th of 1in)
+pt - points (1pt = 1/72 of 1in)
+pc - picas (1pc = 12 pt)
+
+2.Relative Units: 
+
+em - Relative to the font-size of the element (2em means 2 times the size of the current font)
+rem - Relative to font-size of the root element
+vw - Relative to 1% of the width of the viewport*
+vh - Relative to 1% of the height of the viewport*
+vmin - Relative to 1% of viewport's* smaller dimension  
+vmax - Relative to 1% of viewport's* larger dimension
+% - Relative to the parent element
+
+*Viewport = the browser window size. If the viewport is 50cm wide, 1vw = 0.5cm.
+</pre>
+
+<div class="div1">
+  display: inline
+  1.not starts with new line
+  2.Does not take full width
+  3.no height and width(including no top bottom margin)
+</div>
+
+<div class="div2">
+  display: block
+  1.not starts with new line
+  2.Does not take full width
+  3.Height & width can be applied
+</div>
+
+<div class="div3">
+  display: inline-block
+  1.not starts with new line
+  2.Does not take full width
+  3.Height & width can be applied
+</div>
+
+<div id="info-card">
+  <img src="media/pineapple.jpg">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+<div id="parent-div">
+  <div id="one"></div>
+  <div id="two"></div>
+  <div id="three"><img src="media/image.jpg" alt=""></div>
+</div>
+
+
+<iframe src="CSS_Notes.txt" id="css_notes"></iframe>
+
+<div id="mybox1" class="mybox">
+  
+</div>
+<div id="mybox2" class="mybox">
+  
+</div>
+
+<div id="mybox3" class="mybox">
+  
+</div>
+
+<div id="mybox4" class="mybox">
+  
+</div>
+
+<h2>perspective: 100px: & perspective-origin animation</h2>
+<div id="div1">DIV1
+  <div id="div2">DIV2</div>
+</div>
+
+<h2>perspective: none:</h2>
+<div id="div3">DIV3
+  <div id="div4">DIV4</div>
+</div>
+
+
+<div class="tada">
+  Hover me to show the p element
+  <p>Tada! Here I am!</p>
+</div>
+
+
+
+
+</body>
+</html>
+
+

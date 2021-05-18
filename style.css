@@ -1,0 +1,530 @@
+/*Inline css has more priority (!important is exception)
+Then internal and external whichever is written last. (!important is exception)*/
+
+/*We can divide CSS selectors into five categories:
+
+Simple selectors (select elements based on name, id, class)
+Combinator selectors (select elements based on a specific relationship between them)
+Pseudo-class selectors (select elements based on a certain state)
+Pseudo-elements selectors (select and style a part of an element)
+Attribute selectors (select elements based on an attribute or attribute value)*/
+
+
+/**{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}*/
+@font-face{
+	font-family: abc;
+	src: url(fonts/Montserrat-Regular.ttf);
+}
+
+:root{
+	/*css variable which is global as it is declared in :root*/
+	--btn-color: teal;
+	--heading-color: blue;
+}
+
+body{
+	background-image: url(media/img2.jpg);
+	background-position: center center;
+	background-attachment: fixed;
+}
+
+p{
+	font-size: 18px;
+	font-family: 'Rubik', sans-serif;
+	color: darkgreen;
+	border-left: 4px solid green;
+	padding-left: 10px; 
+	/*text-transform: uppercase;*/
+}
+
+h4{
+	font-family: Georgia, Helvetica;
+	background-color: tomato;
+	color: #ffffff;
+	padding: 10px;
+}
+
+h3{
+	background-color: rgba(0, 172, 255, 0.6);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+}
+
+h1{
+	font-family: "Audiowide", sans-serif;
+	text-shadow: 3px 3px 3px #ababab;
+}
+
+#addr{
+	text-align: center;
+	background-image: url("media/img1.jpg");
+	background-size: contain;
+	color: #fff;
+	padding: 20px;
+}
+
+.headings{
+	border-style: solid;
+	/*border-style: solid dotted dashed double; /*different borders in different sides*/
+	/*border-style: solid dotted; top bottom will have solid and left right will have dotted*/
+	border-width: thick;
+	/*border-width: 25px 10px 4px 35px;  25px top, 10px right, 4px bottom and 35px left */
+	border-color: dodgerblue;
+	border-radius: 30px;
+	/*border-radius: 10px 20px 30px 40px; */
+	padding: 5px 20px;
+	margin: 50px;
+	cursor: help;
+	box-shadow: 10px 15px 5px gray;
+	/*box-shadow: 10px 15px 5px gray, 10px 15px 5px lightgreen inset; multiple shadows*/
+}
+
+pre{
+	background-color: rgba(14,153,123,0.9);
+	font-family: abc, vardana;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: 300;
+	color: #fff;
+	padding: 20px;
+	margin: 10px 0;
+	line-height: 30px;
+	overflow: auto;
+	max-height: 300px;
+}
+
+#logoImg{
+	vertical-align: middle;
+	border: 2px solid tomato;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+span{
+	text-decoration: underline;
+	letter-spacing: 10px;
+	word-spacing: 10px;
+}
+h2{
+	color: brown;
+	text-shadow: 2px 5px 5px pink;
+	/*writing-mode: vertical-lr;*/
+}
+
+a:link{
+	text-decoration: none;
+	color: darkred;
+}
+
+a:visited{
+	color: red;
+}
+
+a:hover{
+	color: royalblue;
+	text-decoration: underline;
+	font-size: 20px;
+	font-family: tahoma;
+}
+
+a:active{
+	color: hotpink;
+}
+
+marquee{
+	font-size: 20px;
+	font-weight: bold;
+	font-family: monospace, Arial;
+	font-variant: small-caps;
+}
+
+li{
+	font-family: Verdana, tahoma;
+}
+
+nav{
+	background-color: lightgreen;
+	color: #fff !important;
+	padding: 20px; 
+}
+
+img:hover{
+	opacity: 0.8;
+}
+
+#pic-img{
+	filter: grayscale(35%);
+}
+
+#pic-img:hover{
+	filter: contrast(500%);
+}
+
+.container1{
+	border: 2px solid red;
+	padding: 10px;
+	outline: 5px solid green;
+	outline-offset: 5px;
+	margin: 20px 10px; 
+	background-image: url(media/flower.png), url(media/flower2.png);
+	background-position: right top, left top;
+	background-repeat: no-repeat, no-repeat;
+	background-size: contain, cover;
+	background-origin: content-box, border-box;
+	/*background: url(flower.png) no-repeat right top, url(flower2.png) no-repeat right top;*/
+}
+
+.container1:hover{
+	background-position: right bottom;
+}
+
+ul{
+	/*list-style-type: square;*/
+	list-style-image: url(media/check.jpg);
+}
+
+ol{
+	background: #3399ff;
+  	padding: 10px;
+  	list-style-position: inside;
+}
+
+ul li{
+	background: #ffe5e5;
+	border: 1px solid pink;
+	padding: 10px;
+}
+
+ol li {
+  	background: #cce5ff;
+  	margin: 5px;
+}
+
+li:hover{
+	background: hotpink;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+/*adding borders in table*/
+
+table, th, td, caption {
+  border: 1px solid darkblue;
+}
+
+table {
+  border-collapse: collapse;
+  font-family: tahoma, georgia;
+  empty-cells: hide;
+}
+
+table{
+	margin: 50px auto;
+	width: 80%;
+}
+
+th, tr, td, caption{
+	padding: 10px 20px;
+}
+
+tr:nth-child(even){
+	background-color: rgba(0,0,255,0.1);
+}
+
+
+tr:hover{
+	color: #fff;
+	background-color: royalblue;
+}
+
+table img{
+	width: 4em;
+}
+
+
+th{
+	background-color: royalblue;
+	color: white;
+}
+
+button{
+	background-color: var(--btn-color);
+	padding: 10px;
+	border-style: none;
+	color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+	font-family: abc, georgia;
+}
+
+button:hover{
+	opacity: 0.9;
+}
+.tada{
+	margin: 20px;
+	height: 100px;
+	cursor: default;
+}
+.tada p{
+	display: none;
+	background-color: yellow;
+	padding: 10px;
+}
+
+.tada:hover p{
+	display: block;
+}
+
+pre::first-letter{
+	font-size: xx-large;
+	color: black;
+}
+
+h1::before{
+	content: url(media/arrow.png);
+	margin-right: 20px;
+	vertical-align: bottom;
+}
+
+p::selection{
+	background-color: yellow;
+}
+
+h1::selection{
+	background-color: gray;
+}
+
+.div1{
+	border: 2px solid red;
+	display: inline;
+	/*height: 50px;*/
+	margin: 10px 0;
+	padding: 10px;
+	font-size: 16px;
+	font-family: abc, georgia;
+}
+
+.div2{
+	border: 2px solid green;
+	display: block;
+	height: 50px;
+	margin-bottom: 10px;
+	padding: 20px;
+	font-size: 16px;
+	font-family: abc, georgia;
+}
+
+.div3{
+	border: 2px solid blue;
+	display: inline-block;
+	height: 50px;
+	margin-bottom: 10px;
+	padding: 20px;
+	font-size: 16px;
+	font-family: abc, georgia;
+}
+
+#parent-div{
+	display: inline-block;
+	padding: 20px;
+	width: 50%;
+	border: 2px solid red;
+	position: relative;
+}
+
+#one{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background-color: green;
+	position: relative;
+	left: 50px;
+	top: 20px;
+	z-index: 1;
+	/*z-index: -1;  it will be below the default*/
+
+}
+
+#two{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+}
+
+#three{
+	display: inline-block;
+	background-color: black;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	background: radial-gradient(circle, red, green, blue);
+}
+
+
+#css_notes{
+	display: block;
+	font-size: 100px;
+	border: 2px dashed royalblue;
+	width: 95%;
+	padding: 10px;
+}
+
+#info-card{
+	border: 2px solid black;
+	padding: 30px;
+	margin: 10px;
+	overflow: auto;
+	background: linear-gradient(to bottom right, dodgerblue, royalblue, skyblue);
+	/*background: linear-gradient(240deg, royalblue, skyblue);*/
+}
+
+#info-card p{
+	border: none;
+	color: white;
+}
+
+#info-card img{
+	width: 200px;
+	height: 200px;
+	float: right;
+	margin-left: 10px;
+}
+
+.mybox{
+	width: 150px;
+	height: 150px;
+	display: inline-block;
+	margin: 20px 20px 10px auto;
+	border: 2px solid black;
+}
+
+#mybox1{
+	background-image: linear-gradient(orange, white, green);
+	animation-name: transform2d-anim;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+
+#mybox2{
+	background-image: radial-gradient(circle, tomato, royalblue, hotpink);
+	transition-property: width, background-image;
+	/*transition-property: all;*/
+	transition-duration: 1s;
+	transition-delay: 500ms;
+	/*transition-timing-function: cubic-bezier(10,20,30,40);*/
+	transition-timing-function: ease-out;
+	/*transition: width 2s, height 1s;*/
+}
+
+#mybox2:hover{
+	width: 400px;
+	/*height: 200px;*/
+	background-image: radial-gradient(circle, blue, pink, coral);
+}
+
+#mybox3{
+	background-image: repeating-linear-gradient(red, green 10%, blue 20%, yellow 30%);
+	animation-name: example;
+	animation-duration: 2s;
+	animation-delay: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: reverse;
+	animation-timing-function: ease-in;
+}
+
+
+#mybox4{
+	background-image: repeating-radial-gradient(red, green 10%, blue 20%, yellow 30%);
+	animation-name: transform3d-anim;
+	animation-duration: 3s;
+	animation-iteration-count: 30;
+	animation-direction: alternate;
+}
+
+@keyframes transform2d-anim{
+	0%{
+		transform: translate(10px, 15px);
+	}
+
+	30%{
+		transform: rotate(180deg);
+	}
+
+	50%{
+		transform: skew(10deg);
+	}
+
+	80%{
+		/*transform: skewY(30deg);*/
+		transform: scale(0.5);
+	}
+
+	100%{
+		transform-origin: 60% 80%; 
+		background-image: linear-gradient(to bottom left ,orange, white, green);
+	}
+
+}
+
+ @keyframes transform3d-anim{
+ 	0% {transform: translate3d(100px,60px,80px);}
+
+ 	30% {transform: scale3d(0.8,0.8,0.8);}
+
+ 	60% {transform: rotate3d(200, 150, 100, 360deg);}
+
+ 	100% {background-image: repeating-radial-gradient(hotpink, dodgerblue, lightgreen, tomato);}
+ }
+
+ @keyframes mymove {
+  50% {perspective-origin: 10px 50%;}
+}
+
+@keyframes example {
+  from {background: none; background-color: dodgerblue;}
+  to {background-color: red;}
+}
+
+ #div1 {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  margin-left: 60px;
+  border: 1px solid blue;
+  perspective: 100px;
+  animation: mymove 5s infinite;
+}
+
+#div2, #div4 {
+  padding: 50px;
+  position: absolute;
+  border: 1px solid black;
+  background-color: red;
+  background: rgba(100,100,100,0.5); 
+  transform-style: preserve-3d;
+  transform: rotateX(45deg);
+}
+
+#div3 {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  margin-left: 60px;
+  border: 1px solid blue;
+  perspective: none;
+}
+
+
+
+
+

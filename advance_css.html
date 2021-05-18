@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advance CSS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<body>
+<h1>Border Image</h1>
+<div id='border-image'>
+	Border Image
+</div>
+
+<h2 id="multiple-text-shadow">Multiple text shadow</h2>
+
+<h1>Card with box shadow</h1>
+<div class="card">
+<img src="media/rock.jpg" alt="Norway" style="width:100%">
+<div class="card-text">
+	<p>Hardanger, Norway</p>
+</div>
+</div>
+
+<div class="card">
+	<div class="card-header">
+	<h2>2</h2>
+	</div>
+	<div class="card-text">
+		<p>May 2, 2021</p>
+	</div>
+</div>
+
+<h1>CSS Tooltip</h1>
+<div class="tooltip">Hover over me(left)
+	<span class="tooltiptext left">Tooltip Text</span>
+</div>
+
+<div class="tooltip">Hover over me(right)
+	<span class="tooltiptext right">Tooltip Text</span>
+</div>
+
+<div class="tooltip">Hover over me(top)
+	<span class="tooltiptext top">Tooltip Text</span>
+</div>
+
+<div class="tooltip">Hover over me(bottom)
+	<span class="tooltiptext bottom">Tooltip Text</span>
+</div>
+
+<h1>Styling Images</h1>
+<h2>Rounded Image, thumbnail Image, thumbnail Image as a link:</h2>
+<img class="rounded-img" src="media/paris.jpg" alt="paris">
+<img class="thumb-img" src="media/paris.jpg">
+<a href="#">
+	<img src="media/paris.jpg" alt="paris" class="thumb-img img-link">
+</a>
+
+<h2>Make an Image Responsive</h2>
+<img class="img-responsive" src="media/wide.jpg">
+
+<h2>Center an Image</h2>
+<img src="media/paris.jpg" class="center-img">
+
+<h2>Add Text to Image</h2>
+<div class="img-text">
+	<img src="media/wide.jpg" class="img-text">
+	<div class="topleft">Top Left</div>
+	<div class="topright">Top Right</div>
+	<div class="bottomleft">Bottom Left</div>
+	<div class="bottomright">Bottom Right</div>
+	<div class="center">Center</div>
+</div>
+
+<h2>Image Hover Overlay</h2>
+<div class="container">
+	<img src="media/avatar.png" alt="avatar" id="image1">
+	<div class="overlay">
+		<div class="text">Hello World</div>
+	</div>
+</div>
+
+<div class="container">
+	<img src="media/avatar.png" alt="avatar" id="image2">
+	<div class="middle">
+		<div class="text-block">Rahul Sharma</div>
+	</div>
+</div>
+
+<div class="container">
+	<img src="media/avatar.png" alt="avatar" id="image1">
+	<div class="overlay-slide">
+		<div class="text">Rahul Sharma</div>
+	</div>
+</div>
+
+<h2>CSS Image Reflections</h2>
+<img src="media/img_tree.png" id="image-reflect">
+
+
+<h1>object-fit & object-position property</h1>
+<pre>The CSS object-fit property is used to specify how an img or video should be 
+resized to fit its container.This property tells the content to fill the container in
+a variety of ways; such as "preserve that aspect ratio" or "stretch up and take up as much 
+space as possible".
+
+object-fit: (none/contain/cover/fill(default)/scale-down)
+
+The CSS object-position property is used to specify how an img or video should be positioned within its container.
+
+object-position: ((top left | top center | top right | 
+					center left | center center | center right | 
+					bottom left | bottom center | bottom right
+
+					x-% y-%
+					x-px y-px))
+Demo:
+</pre>
+
+<img src="media/paris.jpg" alt="paris">
+<div class="object-fit-cover">
+	<p>object-fit: cover</p>	
+	<img src="media/paris.jpg" alt="paris">
+</div>
+<div class="object-fit-contain">
+	<p>object-fit: contain</p>
+	<img src="media/paris.jpg" alt="paris">
+</div>
+<div class="object-fit-fill">
+	<p>object-fit: fill</p>
+	<img src="media/paris.jpg" alt="paris">
+</div>
+
+<h1>CSS Resize</h1>
+<pre>
+The resize property specifies if (and how) an element should be resizable by the user.
+</pre>
+
+<div class="resizeable">
+  <p>Let the user resize only the width of this div element.</p>
+  <p>To resize: Click and drag the bottom right corner of this div element.</p>
+</div>
+
+<h1>Box Sizing</h1>
+<pre>
+The CSS box-sizing property allows us to include the padding and border in an element's total width and height.
+Without the CSS box-sizing Property
+By default, the width and height of an element is calculated like this:
+
+width + padding + border = actual width of an element
+height + padding + border = actual height of an element
+</pre>
+<div id="border-box-div1">
+width: 300px, height: 100px
+</div>
+
+<div id="border-box-div2">
+width: 300px, height: 100px, padding: 50px;
+</div>
+
+<div id="border-box-div3">
+same width, height, padding but box-sizing:border-box;
+</div>
+
+<h1>CSS Flexbox</h1>
+<pre>
+The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.
+</pre>
+
+<div class="flex-container">
+  <div class="flex-item" id="flex-item1">1</div>
+  <div class="flex-item" id="flex-item2">2</div>
+  <div class="flex-item" id="flex-item3">3</div>
+  <div class="flex-item" id="flex-item4">4</div>
+  <div class="flex-item" id="flex-item5">5</div>
+  <div class="flex-item" id="flex-item6">6</div>
+</div>
+
+<h1>CSS Multiple Columns</h1>
+<pre>The CSS multi-column layout allows easy definition of multiple columns of text - just like in newspapers.</pre>
+
+<div class="col">
+	<h2>Lorem ipsum abcd Lorem ipsum Lorem ipsum Lorem ipsumlorem title</h2>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+
+<h1>CSS Grid Layout Module</h1>
+<pre>
+The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design 
+web pages without having to use floats and position
+</pre>
+
+<div class="grid-container">
+	<div class="grid-item" id="grid1">1</div>
+	<div class="grid-item" id="grid2">2</div>
+	<div class="grid-item" id="grid3">3</div>
+	<div class="grid-item" id="grid4">4</div>
+	<div class="grid-item" id="grid5">5</div>
+	<div class="grid-item" id="grid6">6</div>
+	<div class="grid-item" id="grid7">7</div>
+	<div class="grid-item" id="grid8">8</div>
+	<div class="grid-item" id="grid9">9</div>
+</div>
+
+<div class="grid-layout-container">
+	<div class="grid-layout-item" id="item1">Header</div>
+	<div class="grid-layout-item" id="item2">Menu</div>
+	<div class="grid-layout-item" id="item3">Main</div>
+	<div class="grid-layout-item" id="item4">Right</div>
+	<div class="grid-layout-item" id="item5">Footer</div>
+</div>
+
+<h1>CSS Media Queris</h1>
+<pre>
+Media query is a CSS technique introduced in CSS3.
+It uses the @media rule to include a block of CSS properties only if a certain condition is true.
+Demo:
+</pre>
+
+<div id="media-div1">
+	<h1>div1</h1>
+</div>
+<div id="media-div2">
+	<h1>div2</h1>
+</div>
+
+
+
+</body>
+</html>
